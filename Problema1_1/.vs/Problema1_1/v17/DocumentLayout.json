@@ -1,22 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1\\",
+  "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1y2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{989514FA-A8F2-4B90-8DC6-5565D25D123F}|Problema1_1.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{989514FA-A8F2-4B90-8DC6-5565D25D123F}|Problema1_1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{989514FA-A8F2-4B90-8DC6-5565D25D123F}|Problema1_1.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_1\\pila.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{989514FA-A8F2-4B90-8DC6-5565D25D123F}|Problema1_1.csproj|solutionrelative:pila.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{989514FA-A8F2-4B90-8DC6-5565D25D123F}|Problema1_1.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_1\\pruebas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{989514FA-A8F2-4B90-8DC6-5565D25D123F}|Problema1_1.csproj|solutionrelative:pruebas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{989514FA-A8F2-4B90-8DC6-5565D25D123F}|Problema1_1.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_1\\icollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{989514FA-A8F2-4B90-8DC6-5565D25D123F}|Problema1_1.csproj|solutionrelative:icollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{989514FA-A8F2-4B90-8DC6-5565D25D123F}|Problema1_1.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_1y2\\cola.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{989514FA-A8F2-4B90-8DC6-5565D25D123F}|Problema1_1.csproj|solutionrelative:cola.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Pruebas.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1\\Pruebas.cs",
-              "RelativeDocumentMoniker": "Pruebas.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1\\Pruebas.cs",
-              "RelativeToolTip": "Pruebas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T15:42:09.113Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Pila.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1\\Pila.cs",
-              "RelativeDocumentMoniker": "Pila.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1\\Pila.cs",
-              "RelativeToolTip": "Pila.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T15:27:36.523Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ICollection.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1\\ICollection.cs",
-              "RelativeDocumentMoniker": "ICollection.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1\\ICollection.cs",
-              "RelativeToolTip": "ICollection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T15:20:58.209Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Title": "Cola.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1y2\\Cola.cs",
+              "RelativeDocumentMoniker": "Cola.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1y2\\Cola.cs",
+              "RelativeToolTip": "Cola.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T15:15:52.89Z",
+              "WhenOpened": "2025-08-30T16:52:39.473Z",
               "EditorCaption": ""
             }
           ]

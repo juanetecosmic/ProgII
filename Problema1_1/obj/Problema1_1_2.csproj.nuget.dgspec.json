@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1y2\\Problema1_1.csproj": {}
+    "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1\\Problema1_1_2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1y2\\Problema1_1.csproj": {
+    "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1\\Problema1_1_2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1y2\\Problema1_1.csproj",
-        "projectName": "Problema1_1",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1y2\\Problema1_1.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1\\Problema1_1_2.csproj",
+        "projectName": "Problema1_1_2",
+        "projectPath": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1\\Problema1_1_2.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1y2\\obj\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
