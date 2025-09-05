@@ -44,5 +44,50 @@ else
     }
 }
 
+//Insertar factura
+Console.WriteLine("\nCreando factura");
+FacturaService f = new FacturaService();
+Factura factura = new Factura() { Id = 0, Cliente = "Juanito", Vendedor = "Mercedes", Forma_Pago = new FormaPago() { Id = 1, Forma_Pago = "Crédito" },
+Fecha = DateTime.Now, Detalles = new List<Detalle>() };
+Detalle d = new Detalle() { Cabecera = factura, Articulo = a.GetById(1), Cantidad=2, PrecioUnitario=7000 };
+Detalle d2 = new Detalle() { Cabecera = factura, Articulo = a.GetById(2), Cantidad=1, PrecioUnitario=8000 };
+factura.AddDetalle(d);
+factura.AddDetalle(d2);
+if (f.Save(factura))
+{
+    Console.WriteLine("Factura guardada exitosamente");
+}
+else
+{
+    Console.WriteLine("Error al guardar la factura");
+}
+
+//Listar facturas
+/*Console.WriteLine("\nListando todas las facturas");
+var todas = f.GetAll();
+if (todas.Count == 0)
+{
+    Console.WriteLine("No hay facturas para mostrar");
+}
+else
+{
+    foreach (Factura fac in todas)
+    {
+        Console.WriteLine(fac.ToString());
+    }
+}*/
+
+//Listar factura por ID
+Console.WriteLine("\nListando factura por ID");
+var facturaporid = f.GetById(1);
+if (facturaporid == null)
+{
+    Console.WriteLine("No hay factura para mostrar");
+}
+else
+{
+    Console.WriteLine(facturaporid.ToString());
+}
+
 
 

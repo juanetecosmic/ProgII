@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FF5080-3BCD-42C4-95C5-E1AAB4AA5398}|Problema1_3.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_3\\pack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3FF5080-3BCD-42C4-95C5-E1AAB4AA5398}|Problema1_3.csproj|solutionrelative:pack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FF5080-3BCD-42C4-95C5-E1AAB4AA5398}|Problema1_3.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_3\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3FF5080-3BCD-42C4-95C5-E1AAB4AA5398}|Problema1_3.csproj|solutionrelative:producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FF5080-3BCD-42C4-95C5-E1AAB4AA5398}|Problema1_3.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3FF5080-3BCD-42C4-95C5-E1AAB4AA5398}|Problema1_3.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FF5080-3BCD-42C4-95C5-E1AAB4AA5398}|Problema1_3.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_3\\suelto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3FF5080-3BCD-42C4-95C5-E1AAB4AA5398}|Problema1_3.csproj|solutionrelative:suelto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FF5080-3BCD-42C4-95C5-E1AAB4AA5398}|Problema1_3.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_3\\iprecio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3FF5080-3BCD-42C4-95C5-E1AAB4AA5398}|Problema1_3.csproj|solutionrelative:iprecio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Suelto.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_3\\Suelto.cs",
+              "RelativeDocumentMoniker": "Suelto.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_3\\Suelto.cs",
+              "RelativeToolTip": "Suelto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T20:56:08.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Pack.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_3\\Pack.cs",
+              "RelativeDocumentMoniker": "Pack.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_3\\Pack.cs",
+              "RelativeToolTip": "Pack.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T20:39:21.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_3\\Producto.cs",
+              "RelativeDocumentMoniker": "Producto.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_3\\Producto.cs",
+              "RelativeToolTip": "Producto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T20:34:18.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IPrecio.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_3\\IPrecio.cs",
+              "RelativeDocumentMoniker": "IPrecio.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_3\\IPrecio.cs",
+              "RelativeToolTip": "IPrecio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T20:33:39.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_3\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_3\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T17:05:15.89Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

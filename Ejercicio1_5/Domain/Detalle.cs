@@ -12,23 +12,18 @@ namespace Ejercicio1_5.Domain
         public required Factura Cabecera { get; set; }
         public required Articulo Articulo { get; set; }
         public int Cantidad { get; set; }
-        public double Importe { get; set; }
-        public Detalle()
-        {
-            Id = 0;
-            Cantidad = 0;
-            Importe = 0;
-        }
+        public double PrecioUnitario { get; set; }
+        
         public double CalculateSubtotal()
         {
-            var subtotal = Importe * Cantidad;
+            var subtotal = PrecioUnitario * Cantidad;
             return subtotal;
         }
         public override string ToString()
         {
             return $"\nArtículo = {Articulo.Descripcion} \n" +
                 $"Cantidad = {Cantidad}\n" +
-                $"Importe = {Importe}\n";
+                $"Precio unitario = {PrecioUnitario}\n";
         }
     }
 }

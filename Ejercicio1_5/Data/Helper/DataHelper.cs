@@ -24,6 +24,13 @@ namespace Ejercicio1_5.Data.Helper
             }
             return _instance;
         }
+        public SqlConnection GetConnection()
+        {
+            if (_connection == null)
+                _connection = new SqlConnection(Properties.Resources.Connection);
+
+            return _connection;
+        }
         public DataTable? ExecuteSP(string sp, List<Parameters>? parameters)
         {
             DataTable? table = new DataTable();

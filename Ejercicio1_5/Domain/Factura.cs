@@ -9,13 +9,16 @@ namespace Ejercicio1_5.Domain
     public class Factura
     {
         public  int Id { get; set; }           
-        public  int Cliente { get; set; }           
-        public  int Vendedor { get; set; }           
+        public  required string Cliente { get; set; }           
+        public  required string Vendedor { get; set; }           
         public  DateTime Fecha { get; set; }
-        public  int FormaPago { get; set; }
-        public  List<Detalle> Detalles { get; set; }
+        public  FormaPago Forma_Pago { get; set; }
+        private List<Detalle> detalles;
+        public List<Detalle> Detalles { get; set; }
+        public List<Detalle> GetDetalles() => Detalles;
         public Factura()
         {
+            Fecha = DateTime.Now;
             Detalles = new List<Detalle>();
         }
         public void AddDetalle(Detalle detalle)
@@ -44,11 +47,12 @@ namespace Ejercicio1_5.Domain
                 detallestring = detalle.ToString() + "\nSubtotal = " +
                 detalle.CalculateSubtotal();
             }
-            return $"\nCódigo = {Id} \n" +
+            return $"\nVALIDEZ SOLO POR 48 HORAS\n" +
+                $"Código = {Id} \n" +
                 $"Cliente = {Cliente} \n" +
                 $"Vendedor = {Vendedor}\n" +
                 $"Fecha = {Fecha}\n" +
-                $"Forma de Pago = {FormaPago}\n" +
+                $"Forma de Pago = {Forma_Pago.ToString()}\n" +
                 $"Detalle:\n" + detallestring + "\n" +
                 "Total: " + Total();
         }
