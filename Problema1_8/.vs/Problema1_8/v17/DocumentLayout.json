@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_8\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{85A22959-A8F3-4BC4-857F-7AEB92981E4C}|Problema1_8.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_8\\data\\repositories\\petrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85A22959-A8F3-4BC4-857F-7AEB92981E4C}|Problema1_8.csproj|solutionrelative:data\\repositories\\petrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85A22959-A8F3-4BC4-857F-7AEB92981E4C}|Problema1_8.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_8\\data\\repositories\\attentionservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85A22959-A8F3-4BC4-857F-7AEB92981E4C}|Problema1_8.csproj|solutionrelative:data\\repositories\\attentionservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{85A22959-A8F3-4BC4-857F-7AEB92981E4C}|Problema1_8.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85A22959-A8F3-4BC4-857F-7AEB92981E4C}|Problema1_8.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,20 +27,12 @@
       "RelativeMoniker": "D:0:0:{85A22959-A8F3-4BC4-857F-7AEB92981E4C}|Problema1_8.csproj|solutionrelative:services\\petservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85A22959-A8F3-4BC4-857F-7AEB92981E4C}|Problema1_8.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_8\\data\\repositories\\attentionservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85A22959-A8F3-4BC4-857F-7AEB92981E4C}|Problema1_8.csproj|solutionrelative:data\\repositories\\attentionservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{85A22959-A8F3-4BC4-857F-7AEB92981E4C}|Problema1_8.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_8\\domain\\attention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85A22959-A8F3-4BC4-857F-7AEB92981E4C}|Problema1_8.csproj|solutionrelative:domain\\attention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{85A22959-A8F3-4BC4-857F-7AEB92981E4C}|Problema1_8.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_8\\domain\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85A22959-A8F3-4BC4-857F-7AEB92981E4C}|Problema1_8.csproj|solutionrelative:domain\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85A22959-A8F3-4BC4-857F-7AEB92981E4C}|Problema1_8.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_8\\data\\repositories\\petrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85A22959-A8F3-4BC4-857F-7AEB92981E4C}|Problema1_8.csproj|solutionrelative:data\\repositories\\petrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{85A22959-A8F3-4BC4-857F-7AEB92981E4C}|Problema1_8.csproj|c:\\users\\pc\\desktop\\repo_progii\\progii\\problema1_8\\data\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,11 +66,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "PetService.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_8\\Services\\PetService.cs",
               "RelativeDocumentMoniker": "Services\\PetService.cs",
@@ -78,12 +78,11 @@
               "RelativeToolTip": "Services\\PetService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T18:53:01.171Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-07T18:53:01.171Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ClientService.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_8\\Services\\ClientService.cs",
               "RelativeDocumentMoniker": "Services\\ClientService.cs",
@@ -91,12 +90,11 @@
               "RelativeToolTip": "Services\\ClientService.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwCcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T18:55:28.704Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-07T18:55:28.704Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_8\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -109,32 +107,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "AttentionServiceRepository.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_8\\Data\\Repositories\\AttentionServiceRepository.cs",
               "RelativeDocumentMoniker": "Data\\Repositories\\AttentionServiceRepository.cs",
               "ToolTip": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_8\\Data\\Repositories\\AttentionServiceRepository.cs",
               "RelativeToolTip": "Data\\Repositories\\AttentionServiceRepository.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAowBIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-07T18:36:51.974Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "PetRepository.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_8\\Data\\Repositories\\PetRepository.cs",
               "RelativeDocumentMoniker": "Data\\Repositories\\PetRepository.cs",
               "ToolTip": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_8\\Data\\Repositories\\PetRepository.cs",
               "RelativeToolTip": "Data\\Repositories\\PetRepository.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAQwHoAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADEAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T16:36:41.243Z"
+              "WhenOpened": "2025-09-07T16:36:41.243Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ClientRepository.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_8\\Data\\Repositories\\ClientRepository.cs",
               "RelativeDocumentMoniker": "Data\\Repositories\\ClientRepository.cs",
@@ -142,8 +141,7 @@
               "RelativeToolTip": "Data\\Repositories\\ClientRepository.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAgwGEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T15:52:20.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-07T15:52:20.184Z"
             },
             {
               "$type": "Document",
@@ -159,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Attention.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_8\\Domain\\Attention.cs",
               "RelativeDocumentMoniker": "Domain\\Attention.cs",
@@ -167,8 +165,7 @@
               "RelativeToolTip": "Domain\\Attention.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T18:36:36.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-07T18:36:36.956Z"
             },
             {
               "$type": "Document",
@@ -184,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Client.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Repo_ProgII\\ProgII\\Problema1_8\\Domain\\Client.cs",
               "RelativeDocumentMoniker": "Domain\\Client.cs",
