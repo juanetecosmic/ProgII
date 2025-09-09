@@ -1,6 +1,7 @@
 ﻿using Ejercicio1_5.Data.Helper;
 using Ejercicio1_5.Data.Interface;
 using Ejercicio1_5.Domain;
+using Ejercicio1_5.Data.UoW;
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
@@ -12,17 +13,16 @@ using System.Transactions;
 
 namespace Ejercicio1_5.Data.Implementation
 {
-    //Lo intenté pero el getall y el getbyid no me sale :(
     public class FacturaRepository : IFacturaRepository
     {
         private readonly SqlConnection _connection;
         private readonly SqlTransaction _transaction;
-        public FacturaRepository()
+
+        public FacturaRepository(SqlConnection connection, SqlTransaction transaction)
         {
-            _connection = DataHelper.GetInstance().GetConnection();
-            _transaction = null!;
+            _connection = connection;
+            _transaction = transaction;
         }
-        
         public List<Factura> GetAll()
         {
             var facturas = new List<Factura>();
@@ -117,24 +117,6 @@ namespace Ejercicio1_5.Data.Implementation
                             Detalles = new List<Detalle>()
                         };
                     }
-
-                    var detalle = new Detalle
-                    {
-                        Cabecera = factura,
-                        Id = Convert.ToInt32(row["id_detalle"]),
-                        Articulo = new Articulo
-                        {
-                            Id = Convert.ToInt32(row["id_articulo"]),
-                            Descripcion = row["descripcion"] == DBNull.Value ? string.Empty : row["descripcion"].ToString()!,
-                            Stock = Convert.ToInt32(row["stock"]),
-                            Precio = Convert.ToDouble(row["precio"]),
-                            Activo = Convert.ToBoolean(row["activo"])
-                        },
-                        Cantidad = Convert.ToInt32(row["cantidad"]),
-                        PrecioUnitario = Convert.ToDouble(row["pre_unitario"])
-                    };
-
-                    factura.Detalles.Add(detalle);
                 }
             }
             catch (Exception ex)
@@ -148,73 +130,40 @@ namespace Ejercicio1_5.Data.Implementation
         public bool Save(Factura factura)
         {
             bool done = false;
-
-            using (var cnn = DataHelper.GetInstance().GetConnection())
+            try
             {
-                cnn.Open();
-                using (var t = cnn.BeginTransaction())
+                bool isNew = factura.Id == 0;
+                var param = new List<Parameters>()
                 {
-                    try
+                    new Parameters() { Name = "@factura", Value = factura.Id },
+                    new Parameters() { Name = "@CLIENTE", Value = factura.Cliente },
+                    new Parameters() { Name = "@VENDEDOR", Value = factura.Vendedor },
+                    new Parameters() { Name = "@FECHA", Value = factura.Fecha },
+                    new Parameters() { Name = "@FORMAPAGO", Value = factura.Forma_Pago.Id },
+                    new Parameters() { Name = "@FACTURAOUT", Value = 0, IsOut = true }
+                };
+                var rowCabecera = DataHelper.GetInstance().ExecuteSPNonQuery("SP_GUARDAR_CABECERA", param, _connection, _transaction);
+                int facturaId = isNew ? Convert.ToInt32(param.First(p => p.Name == "@FACTURAOUT").Value) : factura.Id;
+                foreach (var detalle in factura.Detalles)
+                {
+                    var paramdetalle = new List<Parameters>()
                     {
-                        bool isNew = factura.Id == 0;
-
-                        SqlCommand cmd = new SqlCommand("SP_GUARDAR_CABECERA", cnn, t);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@factura", factura.Id);
-                        cmd.Parameters.AddWithValue("@CLIENTE", factura.Cliente);
-                        cmd.Parameters.AddWithValue("@VENDEDOR", factura.Vendedor);
-                        cmd.Parameters.AddWithValue("@FECHA", factura.Fecha);
-                        cmd.Parameters.AddWithValue("@FORMAPAGO", factura.Forma_Pago.Id);
-
-                        if (isNew)
-                        {
-                            SqlParameter param = new SqlParameter("@facturaout", SqlDbType.Int)
-                            {
-                                Direction = ParameterDirection.Output
-                            };
-                            cmd.Parameters.Add(param);
-                        }
-
-                        var rows = cmd.ExecuteNonQuery();
-                        if (rows <= 0)
-                        {
-                            t.Rollback();
-                            return false;
-                        }
-
-                        int facturaId = isNew ? Convert.ToInt32(cmd.Parameters["@facturaout"].Value) : factura.Id;
-
-                        foreach (var detalle in factura.Detalles)
-                        {
-                            var cmdDetalle = new SqlCommand("SP_INSERTAR_DETALLE", cnn, t);
-                            cmdDetalle.CommandType = CommandType.StoredProcedure;
-                            cmdDetalle.Parameters.AddWithValue("@factura", facturaId);
-                            cmdDetalle.Parameters.AddWithValue("@ARTICULO", detalle.Articulo.Id);
-                            cmdDetalle.Parameters.AddWithValue("@CANTIDAD", detalle.Cantidad);
-                            cmdDetalle.Parameters.AddWithValue("@PRE_UNITARIO", detalle.PrecioUnitario);
-
-                            var rowsDetalle = cmdDetalle.ExecuteNonQuery();
-                            if (rowsDetalle <= 0)
-                            {
-                                t.Rollback();
-                                throw new Exception("No se pudo guardar un detalle de la factura");
-                            }
-                        }
-
-                        t.Commit();
-                        done = true;
-                    }
-                    catch (Exception ex)
-                    {
-                        t.Rollback();
-                        throw new Exception("Error al guardar la factura", ex);
-                    }
+                        new Parameters() { Name ="@factura", Value = facturaId },
+                        new Parameters() { Name ="@ARTICULO", Value = detalle.Articulo.Id },
+                        new Parameters() { Name ="@CANTIDAD", Value= detalle.Cantidad },
+                        new Parameters() { Name ="@PRE_UNITARIO", Value=detalle.PrecioUnitario },
+                    };
+                    var rowsDetalle = DataHelper.GetInstance().ExecuteSPNonQuery("SP_INSERTAR_DETALLE", paramdetalle, _connection, _transaction);
                 }
+                done = true;
             }
-
+            catch (Exception ex)
+            {
+                throw new Exception("Error al guardar la factura", ex);
+            }
             return done;
         }
-
     }
 }
+
 

@@ -18,6 +18,7 @@ namespace Ejercicio1_5.Domain
         public List<Detalle> GetDetalles() => Detalles;
         public Factura()
         {
+            Id = 0;
             Fecha = DateTime.Now;
             Detalles = new List<Detalle>();
         }
@@ -42,12 +43,12 @@ namespace Ejercicio1_5.Domain
         public override string ToString()
         {
             string detallestring = string.Empty;
-            foreach (var detalle in Detalles)
+            foreach (Detalle detalle in Detalles)
             {
-                detallestring = detalle.ToString() + "\nSubtotal = " +
+                detallestring += detalle.ToString() + "\nSubtotal = " +
                 detalle.CalculateSubtotal();
             }
-            return $"\nVALIDEZ SOLO POR 48 HORAS\n" +
+            return $"\n" +
                 $"Código = {Id} \n" +
                 $"Cliente = {Cliente} \n" +
                 $"Vendedor = {Vendedor}\n" +

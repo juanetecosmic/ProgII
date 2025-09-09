@@ -1,5 +1,6 @@
 ﻿using Ejercicio1_5.Data.Helper;
 using Ejercicio1_5.Data.Interface;
+using Ejercicio1_5.Data.UoW;
 using Ejercicio1_5.Domain;
 using System;
 using System.Collections.Generic;
@@ -22,15 +23,8 @@ namespace Ejercicio1_5.Data.Implementation
                 {
                     List<Parameters> p = new List<Parameters>()
                     { new Parameters() { Name="@codigo",Value= valid.Id} };
-                    var dt = DataHelper.GetInstance().ExecuteSP("sp_baja_articulo", p);
-                    if (dt != null)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    var dt = DataHelper.GetInstance().ExecuteSPNonQuery("sp_baja_articulo", p);
+                    return dt;
                 }
                 else
                 {
@@ -88,7 +82,7 @@ namespace Ejercicio1_5.Data.Implementation
             try
             {
                 List<Parameters> p = new List<Parameters>()
-                { new Parameters() { Name = "@codigo", Value = id.ToString() } };
+                { new Parameters() { Name = "@codigo", Value = id } };
                 var o = DataHelper.GetInstance().ExecuteSP("sp_consultar_articulo_por_id", p);
                 if (o != null && o.Rows.Count >= 0)
                 {
@@ -131,18 +125,16 @@ namespace Ejercicio1_5.Data.Implementation
                         new Parameters() { Name = "@stock", Value = articulo.Stock },
                         new Parameters() { Name = "@precio", Value = articulo.Precio },
                     };
-                        var o = DataHelper.GetInstance().ExecuteSP("sp_guardar_articulo", p);
-                        return true;
+                        var o = DataHelper.GetInstance().ExecuteSPNonQuery("sp_guardar_articulo", p);
+                        return o;
                     }
                     else
                     {
-                        return false;
                         throw new Exception("El artículo no existe");
                     }
                 }
                 catch (Exception)
                 {
-                    return false;
                     throw;
                 }
             }
@@ -157,12 +149,11 @@ namespace Ejercicio1_5.Data.Implementation
                         new Parameters() { Name = "@stock", Value = articulo.Stock },
                         new Parameters() { Name = "@precio", Value = articulo.Precio },
                     };
-                    var o = DataHelper.GetInstance().ExecuteSP("sp_guardar_articulo", p);
-                    return true;
+                    var o = DataHelper.GetInstance().ExecuteSPNonQuery("sp_guardar_articulo", p);
+                    return o;
                 }
                 catch (Exception)
                 {
-                    return false;
                     throw;
                 }
             }

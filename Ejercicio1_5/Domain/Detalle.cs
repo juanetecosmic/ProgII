@@ -9,7 +9,7 @@ namespace Ejercicio1_5.Domain
     public class Detalle
     {
         public int Id { get; set; }
-        public required Factura Cabecera { get; set; }
+        public Factura Cabecera { get; set; }
         public required Articulo Articulo { get; set; }
         public int Cantidad { get; set; }
         public double PrecioUnitario { get; set; }

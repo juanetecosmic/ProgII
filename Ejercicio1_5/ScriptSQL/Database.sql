@@ -61,7 +61,7 @@ create table detalles_facturas
 id_factura int,
 id_articulo int,
 cantidad int,
-pre_unitario int,
+pre_unitario money,
 constraint pk_detalles primary key (id_detalle),
 constraint fk_detalles_facturas foreign key (id_factura)
 references facturas(id_factura),
@@ -167,7 +167,6 @@ end
 GO
 --Procedimiento para llevar una lista de facturas
 CREATE PROCEDURE SP_CONSULTAR_FACTURAS
-@id int output
 AS
 BEGIN
 	select f.id_factura,f.cliente, f.vendedor, f.fecha,f.id_forma_pago,
@@ -199,5 +198,7 @@ CREATE PROCEDURE SP_CONSULTAR_DETALLES_POR_FACTURA_ID
 @codigo int
 AS
 BEGIN
-	select * from detalles_facturas where id_factura=@codigo
+	select df.id_articulo,df.pre_unitario,df.cantidad,a.descripcion from detalles_facturas df
+	join articulos a on a.id_articulo=df.id_articulo
+	where id_factura=@codigo
 END
