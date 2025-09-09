@@ -37,19 +37,27 @@ namespace Ejercicio1_5.Data.Implementation
                 foreach (DataRow row in dt.Rows)
                 {
                     int idFactura = Convert.ToInt32(row["id_factura"]);
+                    var Formadepago = new Dictionary<int, FormaPago>();
+                    if (!Formadepago.ContainsKey((int)row["id_forma_pago"])) // Check if PetType already exists in dictionary
+                    {
+                        var fp = Formadepago[(int)row["id_forma_pago"]] = new FormaPago()// Create and add PetType if not already in dictionary 
+                        {
+                            Id = (int)row["id_forma_pago"],
+                            Forma_Pago = row["forma_pago"].ToString() ?? String.Empty
+                        };
+                    }
 
                     if (idFactura != facturaIdActual)
                     {
-                        factura = new Factura
+                        
+                        
+                            factura = new Factura
                         {
                             Id = idFactura,
                             Cliente = row["cliente"].ToString()!,
                             Vendedor = row["vendedor"].ToString()!,
                             Fecha = Convert.ToDateTime(row["fecha"]),
-                            Forma_Pago = new FormaPago
-                            {
-                                Id = Convert.ToInt32(row["id_forma_pago"])
-                            },
+                            Forma_Pago = Formadepago[(int)row["id_forma_pago"]],
                             Detalles = new List<Detalle>()
                         };
 
@@ -112,7 +120,8 @@ namespace Ejercicio1_5.Data.Implementation
                             Fecha = Convert.ToDateTime(row["fecha"]),
                             Forma_Pago = new FormaPago
                             {
-                                Id = Convert.ToInt32(row["id_forma_pago"])
+                                Id = Convert.ToInt32(row["id_forma_pago"]),
+                                Forma_Pago = row["forma_pago"].ToString() ?? string.Empty
                             },
                             Detalles = new List<Detalle>()
                         };
@@ -132,7 +141,6 @@ namespace Ejercicio1_5.Data.Implementation
             bool done = false;
             try
             {
-                bool isNew = factura.Id == 0;
                 var param = new List<Parameters>()
                 {
                     new Parameters() { Name = "@factura", Value = factura.Id },
@@ -142,8 +150,9 @@ namespace Ejercicio1_5.Data.Implementation
                     new Parameters() { Name = "@FORMAPAGO", Value = factura.Forma_Pago.Id },
                     new Parameters() { Name = "@FACTURAOUT", Value = 0, IsOut = true }
                 };
-                var rowCabecera = DataHelper.GetInstance().ExecuteSPNonQuery("SP_GUARDAR_CABECERA", param, _connection, _transaction);
-                int facturaId = isNew ? Convert.ToInt32(param.First(p => p.Name == "@FACTURAOUT").Value) : factura.Id;
+                DataHelper.GetInstance().ExecuteSPNonQuery("SP_GUARDAR_CABECERA", param, _connection, _transaction);
+                int facturaId = Convert.ToInt32(param.First(p => p.Name == "@FACTURAOUT").Value);
+                int rowsDetalle = 0;
                 foreach (var detalle in factura.Detalles)
                 {
                     var paramdetalle = new List<Parameters>()
@@ -153,9 +162,10 @@ namespace Ejercicio1_5.Data.Implementation
                         new Parameters() { Name ="@CANTIDAD", Value= detalle.Cantidad },
                         new Parameters() { Name ="@PRE_UNITARIO", Value=detalle.PrecioUnitario },
                     };
-                    var rowsDetalle = DataHelper.GetInstance().ExecuteSPNonQuery("SP_INSERTAR_DETALLE", paramdetalle, _connection, _transaction);
+                        if( DataHelper.GetInstance().ExecuteSPNonQuery("SP_INSERTAR_DETALLE", paramdetalle, _connection, _transaction) >0)
+                    {  rowsDetalle++; }
                 }
-                done = true;
+                if (rowsDetalle == factura.Detalles.Count) { done = true; }
             }
             catch (Exception ex)
             {

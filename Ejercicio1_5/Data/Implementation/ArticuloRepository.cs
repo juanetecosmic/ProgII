@@ -24,7 +24,7 @@ namespace Ejercicio1_5.Data.Implementation
                     List<Parameters> p = new List<Parameters>()
                     { new Parameters() { Name="@codigo",Value= valid.Id} };
                     var dt = DataHelper.GetInstance().ExecuteSPNonQuery("sp_baja_articulo", p);
-                    return dt;
+                    return dt > 0;
                 }
                 else
                 {
@@ -126,7 +126,9 @@ namespace Ejercicio1_5.Data.Implementation
                         new Parameters() { Name = "@precio", Value = articulo.Precio },
                     };
                         var o = DataHelper.GetInstance().ExecuteSPNonQuery("sp_guardar_articulo", p);
-                        return o;
+                        if (o > 0) { return true; }
+                        else
+                        { return false; }
                     }
                     else
                     {
@@ -150,7 +152,8 @@ namespace Ejercicio1_5.Data.Implementation
                         new Parameters() { Name = "@precio", Value = articulo.Precio },
                     };
                     var o = DataHelper.GetInstance().ExecuteSPNonQuery("sp_guardar_articulo", p);
-                    return o;
+                    if (o > 0) { return true; }
+                    { return false; }
                 }
                 catch (Exception)
                 {

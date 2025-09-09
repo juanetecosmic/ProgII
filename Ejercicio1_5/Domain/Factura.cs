@@ -8,7 +8,7 @@ namespace Ejercicio1_5.Domain
 {
     public class Factura
     {
-        public  int Id { get; set; }           
+        public int Id { get; set; }         
         public  required string Cliente { get; set; }           
         public  required string Vendedor { get; set; }           
         public  DateTime Fecha { get; set; }

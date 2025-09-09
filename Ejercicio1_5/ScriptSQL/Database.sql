@@ -170,11 +170,13 @@ CREATE PROCEDURE SP_CONSULTAR_FACTURAS
 AS
 BEGIN
 	select f.id_factura,f.cliente, f.vendedor, f.fecha,f.id_forma_pago,
+	fp.forma_pago,
 	df.id_detalle,df.cantidad,df.pre_unitario,
 	a.id_articulo,a.descripcion,a.stock,a.precio,a.stock, a.activo
 	from facturas f
 	join detalles_facturas df on f.id_factura=df.id_factura
 	join articulos a on df.id_articulo=a.id_articulo
+	join formas_pago fp on fp.id_forma_pago=f.id_forma_pago
 END
 
 GO
@@ -184,11 +186,13 @@ CREATE PROCEDURE SP_CONSULTAR_FACTURA_POR_ID
 AS
 BEGIN
 	select f.id_factura,f.cliente, f.vendedor, f.fecha,f.id_forma_pago,
+	fp.forma_pago,
 	df.id_detalle,df.cantidad,df.pre_unitario,
 	a.id_articulo,a.descripcion,a.stock,a.precio,a.stock, a.activo
 	from facturas f
 	join detalles_facturas df on f.id_factura=df.id_factura
 	join articulos a on df.id_articulo=a.id_articulo
+	join formas_pago fp on fp.id_forma_pago=f.id_forma_pago
 	where f.id_factura=@codigo
 END
 

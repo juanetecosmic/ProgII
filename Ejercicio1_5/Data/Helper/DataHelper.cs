@@ -64,9 +64,9 @@ namespace Ejercicio1_5.Data.Helper
             return table;
         }
 
-        public bool ExecuteSPNonQuery(string sp, List<Parameters>? parameters)
+        public int ExecuteSPNonQuery(string sp, List<Parameters>? parameters)
         {
-            bool result = false;
+            int result = 0;
             try
             {
                 if(_connection.State != ConnectionState.Open)
@@ -81,7 +81,7 @@ namespace Ejercicio1_5.Data.Helper
                     }
                 }
                 int rows = cmd.ExecuteNonQuery();
-                result = rows > 0;
+                result = rows;
             }
             catch (SqlException)
             {
@@ -93,11 +93,12 @@ namespace Ejercicio1_5.Data.Helper
             }
             return result;
         }
-        public bool ExecuteSPNonQuery(string sp, List<Parameters>? parameters, SqlConnection connection, SqlTransaction transaction)
+        public int ExecuteSPNonQuery(string sp, List<Parameters>? parameters, SqlConnection connection, SqlTransaction transaction)
         {
-            bool result = false;
+            int result = 0;
             using (var cmd = new SqlCommand(sp, connection, transaction))
             {
+                
                 cmd.CommandType = CommandType.StoredProcedure;
                 if (parameters != null)
                 {
@@ -127,7 +128,7 @@ namespace Ejercicio1_5.Data.Helper
                             paramOut.Value = param.Value;
                     }
                 }
-                result = rows > 0;
+                result = rows;
             }
             return result;
         }
