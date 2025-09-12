@@ -26,14 +26,14 @@ namespace Ejercicio1_5.Domain
             Precio = 0;
             Activo = true;
         }
-        public override string ToString()
-        {
-            return $"\nCódigo = {Id} \n" +
-                $"Descripción = {Descripcion} \n" +
-                $"Stock = {Stock}\n" +
-                $"Precio = {Precio}\n" +
-                $"Activo = {Activo}\n";
-        }
+        //public override string ToString()
+        //{
+        //    return $"\nCódigo = {Id} \n" +
+        //        $"Descripción = {Descripcion} \n" +
+        //        $"Stock = {Stock}\n" +
+        //        $"Precio = {Precio}\n" +
+        //        $"Activo = {Activo}\n";
+        //}
 
     }
 }

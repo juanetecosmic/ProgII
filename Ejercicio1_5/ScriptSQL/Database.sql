@@ -88,7 +88,8 @@ CREATE PROCEDURE SP_GUARDAR_ARTICULO
 @codigo int ,
 @descripcion varchar(50),
 @stock int,
-@precio money
+@precio money,
+@activo bit
 AS
 BEGIN 
 	IF @codigo = 0
@@ -99,7 +100,7 @@ BEGIN
 	ELSE
 		BEGIN
 			update articulos 
-			set descripcion= @descripcion, stock= @stock, precio = @precio
+			set descripcion= @descripcion, stock= @stock, precio = @precio, activo = @activo
 			where id_articulo=@codigo
 		END
 END

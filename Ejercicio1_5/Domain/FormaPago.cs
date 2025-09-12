@@ -10,9 +10,9 @@ namespace Ejercicio1_5.Domain
     {
         public int Id { get; set; }
         public string Forma_Pago { get; set; }
-        public override string ToString()
-        {
-            return Forma_Pago;
-        }
+        //public override string ToString()
+        //{
+        //    return Forma_Pago;
+        //}
     }
 }

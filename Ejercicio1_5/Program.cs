@@ -51,8 +51,8 @@ FacturaService f = new FacturaService();
 Factura factura = new Factura() { Cliente = "Juanito", Vendedor = "Mercedes", Forma_Pago = new FormaPago() { Id = 1, Forma_Pago = "Crédito" },
 Fecha = DateTime.Now, Detalles = new List<Detalle>() };
 
-Detalle d = new Detalle() { Cabecera = factura, Articulo = art, Cantidad=2, PrecioUnitario=7000 };
-Detalle d2 = new Detalle() { Cabecera = factura, Articulo = art2, Cantidad=1, PrecioUnitario=8000 };
+Detalle d = new Detalle() { Articulo = art, Cantidad=2, PrecioUnitario=7000 };
+Detalle d2 = new Detalle() { Articulo = art2, Cantidad=1, PrecioUnitario=8000 };
 factura.AddDetalle(d);
 factura.AddDetalle(d2);
 if (f.Save(factura))

@@ -14,9 +14,11 @@ namespace Ejercicio1_5.Data.Helper
         private static DataHelper? _instance;
         private SqlConnection _connection;
         private SqlTransaction? _transaction;
+        private readonly string _connectionstring;
         private DataHelper()
         {
             _connection = new SqlConnection(Properties.Resources.Connection);
+            _connectionstring = Properties.Resources.Connection;
         }
         public static DataHelper GetInstance()
         {
@@ -33,36 +35,31 @@ namespace Ejercicio1_5.Data.Helper
 
             return _connection;
         }
-        public DataTable? ExecuteSP(string sp, List<Parameters>? parameters)
+        public DataTable ExecuteSP(string sp, List<Parameters>? parameters = null)
+    {
+        DataTable table = new DataTable();
+            using (var conn = new SqlConnection(_connectionstring))
+            using (var cmd = new SqlCommand(sp, conn))
         {
-            DataTable? table = new DataTable();
-            try
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            if (parameters != null)
             {
-                if (_connection.State != ConnectionState.Open)
-                _connection.Open();
-                var cmd = new SqlCommand(sp, _connection);
-                cmd.CommandType = CommandType.StoredProcedure;
-                if (parameters != null)
-                {
-                    foreach (Parameters p in parameters)
-                    {
-                        cmd.Parameters.AddWithValue(p.Name, p.Value);
-                    }
-                }
-                table.Load(cmd.ExecuteReader());
+                foreach (var p in parameters)
+                    cmd.Parameters.AddWithValue(p.Name, p.Value ?? DBNull.Value);
             }
-            catch (SqlException ex)
+
+            conn.Open();
+            using (var reader = cmd.ExecuteReader())
             {
-                table = null;
-                throw new Exception("Error de base de datos", ex);
+                table.Load(reader);
             }
-            finally
-            {
-                if (_connection.State == ConnectionState.Open && _transaction != null)
-                    _connection.Close();
-            }
-            return table;
+                _connection.Close();
         }
+            
+
+        return table;
+    }
 
         public int ExecuteSPNonQuery(string sp, List<Parameters>? parameters)
         {

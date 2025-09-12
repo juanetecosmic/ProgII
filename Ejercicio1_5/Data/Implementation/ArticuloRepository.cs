@@ -124,6 +124,7 @@ namespace Ejercicio1_5.Data.Implementation
                         new Parameters() { Name = "@descripcion", Value = articulo.Descripcion },
                         new Parameters() { Name = "@stock", Value = articulo.Stock },
                         new Parameters() { Name = "@precio", Value = articulo.Precio },
+                        new Parameters() { Name = "@activo", Value = articulo.Activo}
                     };
                         var o = DataHelper.GetInstance().ExecuteSPNonQuery("sp_guardar_articulo", p);
                         if (o > 0) { return true; }
@@ -150,6 +151,7 @@ namespace Ejercicio1_5.Data.Implementation
                         new Parameters() { Name = "@descripcion", Value = articulo.Descripcion },
                         new Parameters() { Name = "@stock", Value = articulo.Stock },
                         new Parameters() { Name = "@precio", Value = articulo.Precio },
+                        new Parameters() { Name = "@activo", Value = articulo.Activo}
                     };
                     var o = DataHelper.GetInstance().ExecuteSPNonQuery("sp_guardar_articulo", p);
                     if (o > 0) { return true; }

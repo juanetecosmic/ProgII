@@ -40,7 +40,7 @@ namespace Ejercicio1_5.Domain
             }
             return total;
         }
-        public override string ToString()
+        /*public override string ToString()
         {
             string detallestring = string.Empty;
             foreach (Detalle detalle in Detalles)
@@ -56,6 +56,6 @@ namespace Ejercicio1_5.Domain
                 $"Forma de Pago = {Forma_Pago.ToString()}\n" +
                 $"Detalle:\n" + detallestring + "\n" +
                 "Total: " + Total();
-        }
+        }*/
     }
 }

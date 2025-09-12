@@ -8,12 +8,10 @@ C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Azure.Ident
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Microsoft.Bcl.Cryptography.dll
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
-C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Microsoft.Identity.Client.dll
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
@@ -48,7 +46,6 @@ C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\runtimes\wi
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\obj\Debug\net8.0\Ejercicio1_5.csproj.AssemblyReference.cache
@@ -65,3 +62,7 @@ C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\obj\Debug\net8.0\refint\Ejer
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\obj\Debug\net8.0\Ejercicio1_5.pdb
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\obj\Debug\net8.0\Ejercicio1_5.genruntimeconfig.cache
 C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\obj\Debug\net8.0\ref\Ejercicio1_5.dll
+C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\PC\Desktop\Repo_ProgII\ProgII\Ejercicio1_5\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll

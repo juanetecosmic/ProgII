@@ -18,11 +18,12 @@ namespace Ejercicio1_5.Data.Implementation
         private readonly SqlConnection _connection;
         private readonly SqlTransaction _transaction;
 
-        public FacturaRepository(SqlConnection connection, SqlTransaction transaction)
+        public FacturaRepository(SqlConnection connection, SqlTransaction? transaction = null)
         {
             _connection = connection;
             _transaction = transaction;
         }
+        
         public List<Factura> GetAll()
         {
             var facturas = new List<Factura>();
@@ -38,9 +39,9 @@ namespace Ejercicio1_5.Data.Implementation
                 {
                     int idFactura = Convert.ToInt32(row["id_factura"]);
                     var Formadepago = new Dictionary<int, FormaPago>();
-                    if (!Formadepago.ContainsKey((int)row["id_forma_pago"])) // Check if PetType already exists in dictionary
+                    if (!Formadepago.ContainsKey((int)row["id_forma_pago"]))
                     {
-                        var fp = Formadepago[(int)row["id_forma_pago"]] = new FormaPago()// Create and add PetType if not already in dictionary 
+                        var fp = Formadepago[(int)row["id_forma_pago"]] = new FormaPago()
                         {
                             Id = (int)row["id_forma_pago"],
                             Forma_Pago = row["forma_pago"].ToString() ?? String.Empty
@@ -67,7 +68,6 @@ namespace Ejercicio1_5.Data.Implementation
 
                     var detalle = new Detalle
                     {
-                        Cabecera = factura!,
                         Id = Convert.ToInt32(row["id_detalle"]),
                         Articulo = new Articulo
                         {

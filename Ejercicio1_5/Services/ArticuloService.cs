@@ -2,6 +2,7 @@
 using Ejercicio1_5.Data.Implementation;
 using Ejercicio1_5.Data.Interface;
 using Ejercicio1_5.Domain;
+using Ejercicio1_5.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio1_5.Services
 {
-    public class ArticuloService
+    public class ArticuloService : IArticuloService
     {
         private IArticuloRepository _articuloRepository;
         public ArticuloService()
